@@ -1,28 +1,17 @@
 #include <stdio.h>
 /**
-* main - Prints all possible combinations of two two-digit numbers
-*
-* Return: Always 0 (Success)
-*/
+ *main - is the entry point of the program
+ * Description:printing all the digits of base 10 using for loop
+ *
+ * Return: the result is always 0 to show success
+ */
 int main(void)
 {
-int i, j;
-for (i = 0; i <= 98; i++)
-{
-for (j = i + 1; j <= 99; j++)
-{
-putchar((i / 10) + '0');
-putchar((i % 10) + '0');
-putchar(' ');
-putchar((j / 10) + '0');
-putchar((j % 10) + '0');
-if (i != 98 || j != 99)
-{
-putchar(',');
-putchar(' ');
-}
-}
-}
-putchar('\n');
-return (0);
-}
+	int i;
+
+	for (i = 0; i <= 9; i++)
+	{
+		printf("%d", i);
+	}
+	printf("\n");
+	return(0);

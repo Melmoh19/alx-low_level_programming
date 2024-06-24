@@ -1,0 +1,6 @@
+opy code
+if {a > b}
+(
+  return {a};
+)
+This statement is invalid in ANSI C. The condition should be in parentheses () and the body should be in braces {}, not parentheses ().i

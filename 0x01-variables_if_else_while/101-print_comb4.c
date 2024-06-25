@@ -1,27 +1,27 @@
-#include "main.h"
-
+#include <stdio.h>
 /**
- * main - prints all possible different combinations of three digits
- * Description: Numbers are separated by commas and spaces.
- * The three digits are different.
- * Only the smallest combination of three digits is printed.
- * Numbers are printed in ascending order.
- * Return: Always 0 (Success)
+ *main - the start point of the program
+ *
+ * Description: The function uses for loop to display digits and comma
+ *
+ * Return: the result is 0 to indicate success.
  */
 int main(void)
 {
-	int i, j, k;
+	int i;
+	int n;
+	int m;
 
-	for (i = 0; i <= 7; i++)
+	for (i = 0 ; i <= 9; i++)
 	{
-		for (j = i + 1; j <= 8; j++)
+		for (n = i + 1; n <= 9; n++)
 		{
-			for (k = j + 1; k <= 9; k++)
+			for (m = n + 1; m <= 9; m++)
 			{
 				putchar(i + '0');
-				putchar(j + '0');
-				putchar(k + '0');
-				if (i != 7 || j != 8 || k != 9)
+				putchar(n + '0');
+				putchar(m + '0');
+				if (i < 7 || n < 8 || m < 9)
 				{
 					putchar(',');
 					putchar(' ');

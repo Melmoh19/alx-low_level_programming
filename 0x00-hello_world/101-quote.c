@@ -1,11 +1,16 @@
-#include <stdio.h>
-#include <unistd.h>
+#include<unistd.h>
+
 /**
- * main - A c program that prints a line to the stardard error
- * Return 1 (success)
+ * main - entry point of the program
+ *
+ * Description: the main function displaying a message without using a funtion
+ *
+ * Return: result is 1 to show error
  */
 int main(void)
 {
-	fput("and that piece ofart is useful\" - Dora Korpar, 2015-10-19\n", stdout);
+	char m[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+	write(2, m, 59);
 	return (1);
 }

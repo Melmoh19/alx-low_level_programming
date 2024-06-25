@@ -2,9 +2,9 @@
 /**
  * main - entry point
  *
- * Description using putchar
+ * Description: using putchar
  *
- * Return is always (0) to show success
+ * Return: is always (0) to show success
  */
 int main(void)
 {

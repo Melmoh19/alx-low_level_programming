@@ -1,33 +1,24 @@
-#include "hash_tables.h"
-
+#include"hash_tables.h"
 /**
- * hash_table_get - retrieve value from hash table
- * @ht: the hash tab;e to retrive value
- * @key: key from which to retrive value
- * Return: value or NULL
+ * hash_table_get - retrieves the value with a key
+ * @ht: hash table
+ * @key: key
+ * Return: NULL
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	unsigned int index;
-
+	unsigned long int index;
 	hash_node_t *current;
 
-	if (ht == NULL || key == NULL)
-	{
+	if (ht == NULL || key == NULL || *key == '\0')
 		return (NULL);
-	}
-
-	index = hash_djb2((unsigned char *)key) % ht->size;
+	index = key_index((const unsigned char *)key, ht->size);
 	current = ht->array[index];
-
 	while (current != NULL)
 	{
 		if (strcmp(current->key, key) == 0)
-		{
 			return (current->value);
-		}
 		current = current->next;
 	}
 	return (NULL);
-
 }
